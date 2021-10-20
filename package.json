@@ -1,0 +1,16 @@
+{
+    "name": "action-trigger-metric",
+    "version": "0.1.0",
+    "main": "dist/index.js",
+    "repository": "git@github.com:sam-lord/action-trigger-metric.git",
+    "author": "Sam Lord <hello@samlord.me>",
+    "license": "MIT",
+    "scripts": {
+        "build": "ncc build"
+    },
+    "devDependencies": {
+        "@actions/core": "^1.6.0",
+        "@tryghost/metrics": "^0.2.4",
+        "@vercel/ncc": "^0.31.1"
+    }
+}
