@@ -2,7 +2,7 @@ name: 'Ghost Metric Shipper'
 description: 'Send metrics to various backends using @tryghost/metrics for GitHub Actions'
 runs:
   using: 'node12'
-  main: 'index.js'
+  main: 'dist/index.js'
 inputs:
   metricName:
     description: 'Metric name'
