@@ -36846,7 +36846,7 @@ var __webpack_exports__ = {};
 (() => {
 const core = __nccwpck_require__(2186);
 const {GhostMetrics} = __nccwpck_require__(6239);
-const metrics = new GhostMetrics(JSON.stringify(core.getInput('configuration')));
+const metrics = new GhostMetrics(JSON.parse(core.getInput('configuration')));
 
 (async () => {
     await metrics.metric(core.getInput('metricName'), core.getInput('metricValue'));
