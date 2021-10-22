@@ -10,7 +10,7 @@
     },
     "devDependencies": {
         "@actions/core": "^1.6.0",
-        "@tryghost/metrics": "^0.2.4",
+        "@tryghost/metrics": "0.2.5",
         "@vercel/ncc": "^0.31.1"
     }
 }
