@@ -1,6 +1,7 @@
+const core = require('@actions/core');
 const {GhostMetrics} = require('@tryghost/metrics');
-const metrics = new GhostMetrics(JSON.stringify(process.env.CONFIGURATION));
+const metrics = new GhostMetrics(JSON.stringify(core.getInput('configuration')));
 
 (async () => {
-    await metrics.metric(process.env.METRICNAME, process.env.METRICVALUE);
+    await metrics.metric(core.getInput('metricName'), core.getInput('metricValue'));
 })();
