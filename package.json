@@ -6,7 +6,7 @@
     "author": "Sam Lord <hello@samlord.me>",
     "license": "MIT",
     "scripts": {
-        "build": "ncc build"
+        "build": "rm dist/index.js && ncc build"
     },
     "devDependencies": {
         "@actions/core": "^1.6.0",
