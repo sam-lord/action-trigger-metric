@@ -36848,8 +36848,20 @@ const core = __nccwpck_require__(2186);
 const {GhostMetrics} = __nccwpck_require__(6239);
 const metrics = new GhostMetrics(JSON.parse(core.getInput('configuration')));
 
+function isNumeric(str) {
+    if (typeof str != "string") return false;
+    return !isNaN(str) && !isNaN(parseFloat(str));
+}
+
 (async () => {
-    await metrics.metric(core.getInput('metricName'), core.getInput('metricValue'));
+    const name = core.getInput('metricName');
+    let value = core.getInput('metricValue');
+
+    if (isNumeric(value)) {
+        value = parseFloat(value);
+    }
+
+    await metrics.metric(name, value);
 })();
 
 })();
